@@ -11,41 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160325031424) do
+ActiveRecord::Schema.define(version: 20160325032532) do
 
   create_table "businessmen", force: :cascade do |t|
     t.string   "name"
     t.string   "type"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "children", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "parent_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "children", ["parent_id"], name: "index_children_on_parent_id"
-
-  create_table "hasmanies", force: :cascade do |t|
-    t.integer  "parent_id"
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "hasmanies", ["parent_id"], name: "index_hasmanies_on_parent_id"
-
-  create_table "parents", force: :cascade do |t|
-    t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "tests", force: :cascade do |t|
-    t.time     "time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
